@@ -1,0 +1,41 @@
+/* card */
+:root {
+    --card-height: 180px;
+}
+
+.card {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    border-radius: 10px;
+    height: var(--card-height);
+    width: 100%;
+    color: aliceblue;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px 0 var(--color);
+}
+.card:hover{
+    scale: 1.05;
+}
+
+.card-img {
+    height: var(--card-height);
+    object-fit: contain;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.card-content h5{
+   font-weight: bold;
+}
+.card-content .card-desc{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }

@@ -9,7 +9,7 @@ const SkillsScreen = () => {
 
             <div className="skills-container">
                 <div className="skills-content">
-                    <h4>LANGUAGES</h4>
+                    <h5>LANGUAGES</h5>
                     <p>Dart</p>
                     <p>Javascript</p>
                     <p>Typescript</p>
@@ -18,7 +18,7 @@ const SkillsScreen = () => {
                     <p>Css</p>
                 </div>
                 <div className="skills-content">
-                    <h4>FRAMEWORKS</h4>
+                    <h5>FRAMEWORKS</h5>
                     <p>Nodejs</p>
                     <p>Tailwind CSS</p>
                     <p>Bootstrap</p>
@@ -27,14 +27,14 @@ const SkillsScreen = () => {
                 </div>
 
                 <div className="skills-content">
-                    <h4>DATABASES</h4>
+                    <h5>DATABASES</h5>
                     <p>Firebase</p>
                     <p>Redis</p>
                     <p>Mongodb</p>
                     <p>MySql</p>
                 </div>
                 <div className="skills-content">
-                    <h4>TOOLS</h4>
+                    <h5>TOOLS</h5>
                     <p>Docker</p>
                     <p>Git & Github</p>
                     <p>Kubernetes</p>

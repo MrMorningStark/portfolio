@@ -6,6 +6,7 @@ import Header from './components/Header';
 import AboutScreen from './screens/AboutScreen';
 import SkillsScreen from './screens/SkillsScreen';
 import { useEffect, useState } from 'react';
+import Projects from './screens/Projects';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -48,6 +49,7 @@ function App() {
       <HomeScreen />
       <AboutScreen />
       <SkillsScreen />
+      <Projects />
     </>
   )
 }
