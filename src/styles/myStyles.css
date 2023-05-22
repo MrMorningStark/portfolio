@@ -190,6 +190,7 @@ header ul li a.active {
 }
 
 .skills-content>p {
+    cursor: default;
     font-size: var(--h6-font-size);
     padding: 3px 0;
     transition: all 0.3s ease-in-out;
@@ -241,6 +242,36 @@ header ul li a.active {
     margin: 20px 0;
 }
 
+/* footer */
+footer{
+    height: 400px;
+}
+footer .footer-top{
+    height: 80%;
+    border-top: 1px solid var(--color);
+    background-color: var(--bg-color);
+    color: var(--color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+footer .footer-top H3{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+footer .footer-top p{
+    margin-bottom: 20px;
+}
+footer .footer-bottom {
+    height: 20%;
+    border-top: 1px solid var(--color);
+    background-color: var(--bg-color);
+    color: #7a889b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media only screen and (max-width: 800px) {
 

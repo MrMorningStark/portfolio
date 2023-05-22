@@ -7,6 +7,7 @@ import AboutScreen from './screens/AboutScreen';
 import SkillsScreen from './screens/SkillsScreen';
 import { useEffect, useState } from 'react';
 import Projects from './screens/Projects';
+import Footer from './components/Footer';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -50,6 +51,7 @@ function App() {
       <AboutScreen />
       <SkillsScreen />
       <Projects />
+      <Footer />
     </>
   )
 }

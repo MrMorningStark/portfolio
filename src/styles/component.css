@@ -13,9 +13,10 @@
     color: aliceblue;
     align-items: center;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 10px 0 var(--color);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-.card:hover{
+
+.card:hover {
     scale: 1.05;
 }
 
@@ -31,11 +32,18 @@
     padding: 0 10px;
 }
 
-.card-content h5{
-   font-weight: bold;
+.card-content h5 {
+    font-weight: bold;
 }
-.card-content .card-desc{
+
+.card-content .card-desc {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
- }
+}
+
+.card-content .card-rm {
+    font-size: 12px!important;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
