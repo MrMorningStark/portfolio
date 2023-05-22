@@ -17,7 +17,7 @@
 }
 
 .card:hover {
-    scale: 1.05;
+    scale: 0.95;
 }
 
 .card-img {
@@ -46,4 +46,5 @@
     font-size: 12px!important;
     text-decoration: underline;
     text-underline-offset: 7px;
+    font-weight: bold;
 }

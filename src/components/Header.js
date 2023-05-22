@@ -74,12 +74,12 @@ const Header = () => {
                 </li>
                 <li>
                     <a href="#skills" className={active == 'skills' ? "active" : ''} onClick={() => onLinkClick('skills')}>SKILLS</a>
-                </li>
-                <li>
-                    <a href="#achievements" className={active == 'achievements' ? "active" : ''} onClick={() => onLinkClick('achievements')}>ACHIEVEMENTS</a>
-                </li>
+                </li>                
                 <li>
                     <a href="#projects" className={active == 'projects' ? "active" : ''} onClick={() => onLinkClick('projects')}>PROJECTS</a>
+                </li>
+                <li className="resume">
+                    <a href="#resume" className={active == 'resume' ? "active" : ''} onClick={() => onLinkClick('resume')}>RESUME <i className="fa fa-cloud-arrow-down" /></a>
                 </li>
             </ul>
             <span className={`hamburger`} onClick={handleHamburgerClick}>

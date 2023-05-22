@@ -65,6 +65,13 @@ header ul li a {
     color: var(--color);
 }
 
+header ul .resume a{
+    text-decoration: none!important;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color);
+}
+
 header ul li a:hover {
     color: var(--colorHover);
     text-decoration: underline;
