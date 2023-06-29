@@ -44,7 +44,7 @@ function App() {
 
   }, [darkMode]);
 
-  useEffect(() => { 
+  useEffect(() => {
     setTimeout(() => {
       setDarkMode(true);
     }, 1500);
@@ -53,8 +53,9 @@ function App() {
 
   return (
     <>
+      {/* <i style={{ pointerEvents: "none", color: "white", position: "absolute", bottom: "100px", right: "40px", background: "transparent" }} className="fa fa-light fa-question fa-bounce fa-2xl" /> */}
       <span title={darkMode ? 'switch to light mode' : 'switch to dark mode'} id='darkMode' onClick={() => setDarkMode(!darkMode)}>
-        <i className={`fa ${darkMode ? 'fa-moon' : 'fa-sun'}`} />
+        <i style={{ color: darkMode ? 'black' : "yellow" }} className={`fa fa-lightbulb fa-lg`} />
       </span>
       <Header />
       <HomeScreen />

@@ -6,7 +6,7 @@ const HomeScreen = () => {
 
     useEffect(() => {
         //typwriter effect to show text and delete then show another text
-        const texts = ["A Full Stack Web Developer", "A Programmer", "A Student"];
+        const texts = ["A Full Stack Web Developer ", "A Programmer ", "A Student ", "A Tech Enthusiast "];
         let count = 0;
         let index = 0;
         let currentText = "";
