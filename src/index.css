@@ -10,6 +10,7 @@ body {
 *::selection {
   background: #2C3333;
   color: #FDEFF4;
+  transition: all 1s ease-in-out !important;
 }
 
 * {
@@ -24,6 +25,7 @@ code {
 *::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: var(--bg-color);
+  transition: all 1s ease-in-out !important;
 }
 
 *::-webkit-scrollbar {
@@ -33,4 +35,5 @@ code {
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--color);
+  transition: all 1s ease-in-out !important;
 }
