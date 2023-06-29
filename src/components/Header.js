@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 
 const Header = () => {
 
@@ -8,8 +8,33 @@ const Header = () => {
 
         const header = document.getElementById("header");
 
+        // Get all sections
+        const sections = document.querySelectorAll('section');
+
         var prevScrollpos = window.pageYOffset;
-        const onScroll = () => {
+        const onScroll = (e) => {
+            // Get viewport height
+            const viewportHeight = window.innerHeight;
+
+            // Loop through sections
+            sections.forEach(section => {
+                // Get section's bounding rectangle
+                const rect = section.getBoundingClientRect();
+
+                // Check if section is visible
+                if (rect.top >= 0 && rect.top < viewportHeight) {
+                    // Section is visible, do something with it
+                    startTransition(() => {
+                        if (document.scrollingElement.scrollTop == 0) {
+                            setActive('home');
+                        } else {
+                            setActive(section.id);
+                        }
+                    })
+
+                }
+            });
+
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
                 header.style.top = "0";
@@ -74,9 +99,12 @@ const Header = () => {
                 </li>
                 <li>
                     <a href="#skills" className={active == 'skills' ? "active" : ''} onClick={() => onLinkClick('skills')}>SKILLS</a>
-                </li>                
+                </li>
                 <li>
                     <a href="#projects" className={active == 'projects' ? "active" : ''} onClick={() => onLinkClick('projects')}>PROJECTS</a>
+                </li>
+                <li className="contact">
+                    <a href="#contact" className={active == 'contact' ? "active" : ''} onClick={() => onLinkClick('contact')}>CONTACT</a>
                 </li>
                 <li className="resume">
                     <a href="#resume" className={active == 'resume' ? "active" : ''} onClick={() => onLinkClick('resume')}>RESUME <i className="fa fa-cloud-arrow-down" /></a>

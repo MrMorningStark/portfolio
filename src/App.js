@@ -10,7 +10,7 @@ import Projects from './screens/Projects';
 import Footer from './components/Footer';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   useEffect(() => {
     let ele = document.querySelector(':root');
     if (ele) {
@@ -21,6 +21,7 @@ function App() {
     }
 
     const darkModeElem = document.getElementById("darkMode");
+    darkModeElem.classList.add('animate');
 
     var prevScrollpos = window.pageYOffset;
     const onScroll = () => {
@@ -33,13 +34,22 @@ function App() {
       prevScrollpos = currentScrollPos;
     }
 
-    document.addEventListener("scroll", onScroll);
+    setTimeout(() => {
+      document.addEventListener("scroll", onScroll);
+    }, 4000);
 
     return () => {
       document.removeEventListener("scroll", onScroll);
     }
 
   }, [darkMode]);
+
+  useEffect(() => { 
+    setTimeout(() => {
+      setDarkMode(true);
+    }, 1500);
+  }, []);
+
 
   return (
     <>

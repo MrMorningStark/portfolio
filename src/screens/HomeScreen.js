@@ -49,7 +49,7 @@ const HomeScreen = () => {
                 }
             </div>
             <div className="home-content">
-                <h1>HEY, I'M RAJAT&nbsp;KHATRI</h1>
+                <h1>HEY, I'M <span style={{ color: "orange" }}>RAJAT&nbsp;KHATRI</span></h1>
                 <iframe style={{ pointerEvents: "none", userSelect: "none" }} src="https://giphy.com/embed/LEe5yo2E9Fi3FmuEPK" width="180" height="180" allowFullScreen></iframe>
                 <p></p>
             </div>
