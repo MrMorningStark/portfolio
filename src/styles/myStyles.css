@@ -65,8 +65,8 @@ header ul li a {
     color: var(--color);
 }
 
-header ul .resume a{
-    text-decoration: none!important;
+header ul .resume a {
+    text-decoration: none !important;
     letter-spacing: 2px;
     font-weight: bold;
     color: var(--color);
@@ -99,6 +99,7 @@ header ul li a.active {
 
 .home-content {
     padding: 0 20px;
+    padding-top: 70px;
     height: 100%;
     width: 100%;
     color: var(--color);
@@ -112,13 +113,42 @@ header ul li a.active {
 .home-content h1 {
     letter-spacing: 2px;
     word-spacing: 2px;
-    transform: scale(1, 1.1);
     font-weight: 900;
     margin-bottom: 30px;
 }
 
 .home-content p {
     letter-spacing: 2px;
+    font-weight: bold;
+    border-right: .15em solid orange;
+    animation:
+        /* typing 3.5s steps(50) alternate infinite, */
+        blink-caret 0.5s step-end infinite;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
 }
 
 /* about */
@@ -250,10 +280,11 @@ header ul li a.active {
 }
 
 /* footer */
-footer{
+footer {
     height: 400px;
 }
-footer .footer-top{
+
+footer .footer-top {
     height: 80%;
     border-top: 1px solid var(--color);
     background-color: var(--bg-color);
@@ -263,13 +294,16 @@ footer .footer-top{
     justify-content: center;
     text-align: center;
 }
-footer .footer-top H3{
+
+footer .footer-top H3 {
     font-weight: bold;
     margin-bottom: 20px;
 }
-footer .footer-top p{
+
+footer .footer-top p {
     margin-bottom: 20px;
 }
+
 footer .footer-bottom {
     height: 20%;
     border-top: 1px solid var(--color);
