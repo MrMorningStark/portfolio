@@ -86,7 +86,7 @@ header ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: var(--h6-font-size) !important;
+    font-size: var(--p-font-size) !important;
     height: 100%;
 }
 

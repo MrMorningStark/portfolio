@@ -107,7 +107,7 @@ const Header = () => {
                     <a href="#contact" className={active == 'contact' ? "active" : ''} onClick={() => onLinkClick('contact')}>CONTACT</a>
                 </li>
                 <li className="resume">
-                    <a href="#resume" className={active == 'resume' ? "active" : ''} onClick={() => onLinkClick('resume')}>RESUME <i className="fa fa-cloud-arrow-down" /></a>
+                    <a href="#resume" className={active == 'resume' ? "active" : ''} onClick={() =>alert('Will be added soon!')}>RESUME <i className="fa fa-cloud-arrow-down" /></a>
                 </li>
             </ul>
             <span className={`hamburger`} onClick={handleHamburgerClick}>
