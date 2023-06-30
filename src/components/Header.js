@@ -84,6 +84,20 @@ const Header = () => {
         })
     }
 
+    const onResumeClick = () => {
+        fetch('RajatKhatri.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'RajatKhatri.pdf';
+                alink.click();
+            })
+        })
+    }
+
     return (
         <header id={`header`} className={`${hamburger && 'hamburger-active'}`}>
             <span id="header-title" className="title" onClick={() => {
@@ -107,7 +121,7 @@ const Header = () => {
                     <a href="#contact" className={active == 'contact' ? "active" : ''} onClick={() => onLinkClick('contact')}>CONTACT</a>
                 </li>
                 <li className="resume">
-                    <a href="#resume" className={active == 'resume' ? "active" : ''} onClick={() =>alert('Will be added soon!')}>RESUME <i className="fa fa-cloud-arrow-down" /></a>
+                    <a href="#resume" className={active == 'resume' ? "active" : ''} onClick={onResumeClick}>RESUME <i className="fa fa-cloud-arrow-down" /></a>
                 </li>
             </ul>
             <span className={`hamburger`} onClick={handleHamburgerClick}>
