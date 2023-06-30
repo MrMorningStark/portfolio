@@ -53,6 +53,14 @@ const HomeScreen = () => {
                 <iframe style={{ pointerEvents: "none", userSelect: "none" }} src="https://giphy.com/embed/LEe5yo2E9Fi3FmuEPK" width="180" height="180" allowFullScreen></iframe>
                 <p></p>
             </div>
+            <span style={{ position: "absolute", bottom: "7%" }} class="scroll-btn">
+                <a href="#about">
+                    <span class="mouse">
+                        <span>
+                        </span>
+                    </span>
+                </a>
+            </span>
             <div className="home-scials">
                 <Socials />
             </div>
