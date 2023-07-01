@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Socials from "../components/Socials";
 import "../styles/particle.css";
+import manPrinting from "../images/manTyping.gif";
 
 const HomeScreen = () => {
 
@@ -39,23 +40,24 @@ const HomeScreen = () => {
 
     }, [])
 
+
     return (
         <section id="home">
             <div id="particle-container">
                 {
                     [...Array(20)].map((e, i) => {
-                        return <div key={i} class="particle"></div>
+                        return <div key={i} className="particle"></div>
                     })
                 }
             </div>
             <div className="home-content">
                 <h1>HEY, I'M <span style={{ color: "orange" }}>RAJAT&nbsp;KHATRI</span></h1>
-                <iframe style={{ pointerEvents: "none", userSelect: "none" }} src="https://giphy.com/embed/LEe5yo2E9Fi3FmuEPK" width="180" height="180" allowFullScreen></iframe>
+                <img src={manPrinting} style={{ pointerEvents: "none", userSelect: "none", width: "180px", height: "180px" }} />
                 <p></p>
             </div>
-            <span style={{ position: "absolute", bottom: "7%" }} class="scroll-btn">
+            <span style={{ position: "absolute", bottom: "7%" }} className="scroll-btn">
                 <a href="#about">
-                    <span class="mouse">
+                    <span className="mouse">
                         <span>
                         </span>
                     </span>

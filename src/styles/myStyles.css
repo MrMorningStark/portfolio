@@ -119,7 +119,7 @@ header ul li a.active {
 #home {
     position: static;
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     background-image: var(--bg-img);
     background-color: var(--bg-color);
     transition: all 1s ease-in-out !important;
@@ -411,6 +411,12 @@ footer .footer-bottom {
 
     /* home */
 
+    #home {
+        position: static;
+        height: 100svh;
+        padding: 0;
+    }
+
     .home-content p {
         letter-spacing: 1px;
     }
@@ -524,9 +530,7 @@ footer .footer-bottom {
     width: 8px;
     height: 8px;
     margin: -4px 0 0 -4px;
-    background: var(--color);
+    background:var(--color);
     border-radius: 50%;
-    -webkit-animation: ani-mouse 2.5s linear infinite;
-    -moz-animation: ani-mouse 2.5s linear infinite;
-    animation: ani-mouse 2.5s linear infinite;
+    animation: ani-mouse 2s linear infinite;
 }
