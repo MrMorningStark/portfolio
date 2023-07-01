@@ -200,7 +200,7 @@ header ul li a.active {
 }
 
 .about-container {
-    padding: 250px 0;
+    padding: 150px 0;
     width: 70%;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -214,6 +214,27 @@ header ul li a.active {
     display: flex;
     flex-direction: column;
     align-items: end;
+    transition: all 1s linear !important;
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+}
+
+.about-heading.animate__fadeInUp {
+    opacity: 1;
+    bottom: 0;
+}
+
+.about-content {
+    transition: all 1s linear !important;
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+}
+
+.about-content.animate__fadeInUp {
+    opacity: 1;
+    bottom: 0;
 }
 
 .about-content p {
@@ -238,6 +259,15 @@ header ul li a.active {
     text-align: center;
     padding: 20px;
     padding-top: 0;
+    transition: all 1s linear !important;
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+}
+
+.skills-heading.animate__fadeInUp {
+    opacity: 1;
+    bottom: 0;
 }
 
 .skills-heading h2 {
@@ -249,6 +279,15 @@ header ul li a.active {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     justify-items: center;
+    transition: all 1s linear !important;
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+}
+
+.skills-container.animate__fadeInUp {
+    opacity: 1;
+    bottom: 0;
 }
 
 .skills-content {
@@ -355,11 +394,11 @@ footer .footer-bottom {
 }
 
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1050px) {
     #home {
         position: relative;
         height: 100%;
-        padding: 225px 0;
+        padding: 150px 0;
     }
 }
 
@@ -530,7 +569,7 @@ footer .footer-bottom {
     width: 8px;
     height: 8px;
     margin: -4px 0 0 -4px;
-    background:var(--color);
+    background: var(--color);
     border-radius: 50%;
     animation: ani-mouse 2s linear infinite;
 }

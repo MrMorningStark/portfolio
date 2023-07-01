@@ -1,10 +1,38 @@
+import { useEffect, useRef, useState } from "react";
 
 const AboutScreen = () => {
     const experienceYears = new Date().getFullYear() - 2022;
+
+    const [isVisible, setVisible] = useState(false);
+    const domRef = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                console.log(entry.isIntersecting)
+                setVisible(entry.isIntersecting)
+            });
+        });
+        observer.observe(domRef.current);
+    }, []);
+
+    useEffect(() => {
+
+        const aboutHeading = document.querySelector(".about-heading");
+        const aboutContent = document.querySelector(".about-content");
+        if (isVisible) {
+            aboutHeading.classList.add("animate__fadeInUp");
+            aboutContent.classList.add("animate__fadeInUp");
+        } else {
+            aboutHeading.classList.remove("animate__fadeInUp");
+            aboutContent.classList.remove("animate__fadeInUp");
+        }
+    }, [isVisible]);
+
     return (
         <section id="about">
-            <div className="about-container">
-                
+            <div className="about-container" ref={domRef}>
+
                 <div className="about-heading">
                     <h2>About</h2>
                     <h4>ME, MYSELF AND I</h4>

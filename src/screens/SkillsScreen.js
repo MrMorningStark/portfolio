@@ -1,9 +1,36 @@
+import { useEffect, useRef, useState } from "react";
 
 const SkillsScreen = () => {
-    return (
-        <section id="skills">
 
-            <div className="skills-heading">
+    const [isVisible, setVisible] = useState(false);
+    const domRef = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                setVisible(entry.isIntersecting)
+            });
+        });
+        observer.observe(domRef.current);
+    }, []);
+
+    useEffect(() => {
+
+        const aboutHeading = document.querySelector(".skills-heading");
+        const aboutContent = document.querySelector(".skills-container");
+        if (isVisible) {
+            aboutHeading.classList.add("animate__fadeInUp");
+            aboutContent.classList.add("animate__fadeInUp");
+        } else {
+            aboutHeading.classList.remove("animate__fadeInUp");
+            aboutContent.classList.remove("animate__fadeInUp");
+        }
+    }, [isVisible]);
+
+    return (
+        <section id="skills" ref={domRef}>
+
+            <div className="skills-heading" >
                 <h2>SKILLS</h2>
             </div>
 
