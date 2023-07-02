@@ -1,25 +1,30 @@
-const Card = ({ index, img, name, title, description }) => {
+import { useState } from "react";
+import SkillsReadMore from "./ProjectReadMore";
 
-    const gradients = {
-        0: 'linear-gradient(to right, #2C5364, #203A43)',
-        1: 'linear-gradient(to right, #eb5821, #e11b4b)',
-        2: 'linear-gradient(to right, #636363, #a2ab58)',
-        3: 'linear-gradient(to right, #4da0b0, #d39d38)',
-        4: 'linear-gradient(to right, #ee0979, #ff6a00)',
-    };
+const Card = (props) => {
 
-    const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+    const { index, img, name, title, description, liveDemo, handleReadMore } = props;
 
-    return (
-        <div className="card" style={{ backgroundImage: gradients[index] }}>
+    return (<>
+        <div className={`card box btn btn-grad${index}`} onClick={() => { handleReadMore(props) }}>
             <img className="card-img" src={img} alt="img" />
             <div className="card-content">
                 <h5>{name}</h5>
                 <p>{title}</p>
                 <p className="card-desc">{description}</p>
-                <p className="card-rm">READ MORE</p>
+                <p className="card-ld" onClick={() => {
+                    if (liveDemo.length > 0) {
+                        window.open(liveDemo, "_blank")
+                    }
+                    else {
+                        alert("No live demo available")
+                    }
+                }} >
+                    LIVE DEMO
+                </p>
             </div>
         </div>
+    </>
     )
 }
 
