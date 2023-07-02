@@ -63,9 +63,9 @@ const HomeScreen = () => {
                     </span>
                 </a>
             </span>
-            <div className="home-scials">
+            {/* <div className="home-scials">
                 <Socials />
-            </div>
+            </div> */}
         </section >
     )
 }

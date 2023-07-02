@@ -168,9 +168,8 @@
     text-decoration: none;
 }
 
-
 .btn-grad4 {
-    background-image: linear-gradient(to right, #56CCF2 0%, #2F80ED 51%, #56CCF2 100%);
+    background-image: linear-gradient(to right, #EC6F66 0%, #F3A183 51%, #EC6F66 100%);
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
@@ -218,7 +217,7 @@
 }
 
 .btn-grad7 {
-    background-image: linear-gradient(to right, #EC6F66 0%, #F3A183 51%, #EC6F66 100%);
+    background-image: linear-gradient(to right, #56CCF2 0%, #2F80ED 51%, #56CCF2 100%);
     transition: 0.5s;
     background-size: 200% auto;
     color: white;

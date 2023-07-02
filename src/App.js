@@ -53,7 +53,6 @@ function App() {
 
   return (
     <>
-      {/* <i style={{ pointerEvents: "none", color: "white", position: "absolute", bottom: "100px", right: "40px", background: "transparent" }} className="fa fa-light fa-question fa-bounce fa-2xl" /> */}
       <span title={darkMode ? 'switch to light mode' : 'switch to dark mode'} id='darkMode' onClick={() => setDarkMode(!darkMode)}>
         <i style={{ color: darkMode ? 'black' : "yellow" }} className={`fa fa-lightbulb fa-lg`} />
       </span>

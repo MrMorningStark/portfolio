@@ -9,7 +9,6 @@ const AboutScreen = () => {
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                console.log(entry.isIntersecting)
                 setVisible(entry.isIntersecting)
             });
         });

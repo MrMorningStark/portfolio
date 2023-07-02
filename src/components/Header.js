@@ -11,7 +11,7 @@ const Header = () => {
         // Get all sections
         const sections = document.querySelectorAll('section');
 
-        var prevScrollpos = window.pageYOffset;
+        var prevScrollpos = window.scrollY;
         const onScroll = (e) => {
             // Get viewport height
             const viewportHeight = window.innerHeight;
@@ -35,7 +35,7 @@ const Header = () => {
                 }
             });
 
-            var currentScrollPos = window.pageYOffset;
+            var currentScrollPos = window.scrollY;
             if (prevScrollpos > currentScrollPos) {
                 header.style.top = "0";
                 if (window.scrollY > 100) {
