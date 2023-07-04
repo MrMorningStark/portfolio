@@ -1,6 +1,21 @@
 import React, { useEffect } from 'react';
 
 const ProjectReadMore = ({ readMoreData }) => {
+
+    useEffect(() => {
+        let socialsEle = document.querySelector('#home .home-scials .socials');
+        let darkModeElem = document.getElementById("darkMode");
+        setTimeout(() => {
+            socialsEle.style.left = '-100px';
+            darkModeElem.style.opacity = '0';
+            darkModeElem.style.visibility = 'hidden';
+        }, 2000)
+        return () => {
+            darkModeElem.style.opacity = '1';
+            darkModeElem.style.visibility = 'visible';
+        }
+    }, [])
+
     const { index, img, name, title, description, liveDemo, handleReadMore } = readMoreData;
 
     return (

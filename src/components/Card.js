@@ -1,6 +1,3 @@
-import { useState } from "react";
-import SkillsReadMore from "./ProjectReadMore";
-
 const Card = (props) => {
 
     const { index, img, name, title, description, liveDemo, handleReadMore } = props;

@@ -18,6 +18,7 @@ function App() {
       ele.style.setProperty('--color', darkMode ? '#F2F2F2' : '#323232');
       ele.style.setProperty('--colorHover', darkMode ? '#0E8388' : '#0E8388');
       ele.style.setProperty('--color2', darkMode ? 'slateblue' : 'slateblue');
+      ele.style.setProperty('--glow-color', darkMode ? 'black' : 'grey');
     }
 
     const darkModeElem = document.getElementById("darkMode");
@@ -26,10 +27,19 @@ function App() {
     var prevScrollpos = window.pageYOffset;
     const onScroll = () => {
       var currentScrollPos = window.pageYOffset;
+      let socialsEle = document.querySelector('#home .home-scials .socials');
       if (prevScrollpos > currentScrollPos) {
+        darkModeElem.style.opacity = '1';
         darkModeElem.style.visibility = 'visible';
+        socialsEle.style.left = '0';
+        socialsEle.style.opacity = '1';
+        socialsEle.style.cursor = 'default';
       } else {
+        darkModeElem.style.opacity = '0';
         darkModeElem.style.visibility = 'hidden';
+        socialsEle.style.left = '-55px';
+        socialsEle.style.opacity = '0.5';
+        socialsEle.style.cursor = 'pointer';
       }
       prevScrollpos = currentScrollPos;
     }

@@ -51,7 +51,7 @@ const HomeScreen = () => {
                 }
             </div>
             <div className="home-content">
-                <h1>HEY, I'M <span style={{ color: "orange" }}>RAJAT&nbsp;KHATRI</span></h1>
+                <h1>HEY, I'M <span>RAJAT KHATRI</span></h1>
                 <img src={manPrinting} style={{ pointerEvents: "none", userSelect: "none", width: "180px", height: "180px" }} />
                 <p></p>
             </div>
@@ -63,9 +63,9 @@ const HomeScreen = () => {
                     </span>
                 </a>
             </span>
-            {/* <div className="home-scials">
+            <div className="home-scials">
                 <Socials />
-            </div> */}
+            </div>
         </section >
     )
 }
