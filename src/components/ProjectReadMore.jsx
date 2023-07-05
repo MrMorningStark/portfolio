@@ -37,20 +37,22 @@ const ProjectReadMore = ({ readMoreData }) => {
                     }
                 </div>
                 <img className="card-img" style={{ height: "300px" }} src={img} alt="img" />
-                <div className="card-content">
+                <div className="card-content" style={{textAlign:"center"}}>
                     <h5>{name}</h5>
                     <p>{title}</p>
                     <p className="card-desc">{description}</p>
-                    <p className="card-ld" onClick={() => {
-                        if (liveDemo.length > 0) {
-                            window.open(liveDemo, "_blank")
-                        }
-                        else {
-                            alert("No live demo available")
-                        }
-                    }} >
-                        LIVE DEMO
-                    </p>
+                    <div className="card-bottom">
+                        <p className="card-ld" onClick={() => {
+                            if (liveDemo.length > 0) {
+                                window.open(liveDemo, "_blank")
+                            }
+                            else {
+                                alert("No live demo available")
+                            }
+                        }} >
+                            LIVE DEMO
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

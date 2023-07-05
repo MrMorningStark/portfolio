@@ -27,6 +27,7 @@
     margin: 0;
     padding: 0 10px;
     text-align: left;
+    padding-right: 20px;
 }
 
 .card-content h5 {
@@ -39,19 +40,41 @@
     text-overflow: ellipsis;
 }
 
-.card-content .card-ld {
+.card-content .card-bottom .card-ld {
     width: max-content;
     display: inline;
-    font-size: 14px !important;
     letter-spacing: 1px;
     color: #FF0060;
     text-underline-offset: 7px;
     font-weight: bold;
-    cursor: pointer;
 }
 
-.card-content .card-ld:hover {
+.card-content .card-bottom .card-rm {
+    width: max-content;
+    display: inline;
+    letter-spacing: 1px;
+    color: #98EECC;
+    text-underline-offset: 7px;
+    /* font-weight: bold; */
+}
+
+.card-content .card-bottom .card-rm:hover {
     text-decoration: underline;
+}
+
+.card-content .card-bottom .card-ld:hover {
+    text-decoration: underline;
+}
+
+.card-content .card-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content .card-bottom p {
+    margin: 0;
+    font-size: 14px !important;
+    cursor: pointer;
 }
 
 /* end */
@@ -79,6 +102,7 @@
     border-top-right-radius: 20px;
     box-shadow: none !important;
     padding: 10px;
+    overflow: auto;
 }
 
 .project-read-more .close {
