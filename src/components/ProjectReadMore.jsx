@@ -16,10 +16,10 @@ const ProjectReadMore = ({ readMoreData }) => {
         }
     }, [])
 
-    const { index, img, name, title, description, liveDemo, handleReadMore } = readMoreData;
-
+    const { index, img, gif, name, title, description, liveDemo, handleReadMore } = readMoreData;
+console.log(gif)
     return (
-        <div className='project-read-more-backdrop'>
+        <div className='project-read-more-backdrop' onBlur={()=>{ handleReadMore(false);}}>
             <div id="particle-container">
                 {
                     [...Array(20)].map((e, i) => {
@@ -36,11 +36,8 @@ const ProjectReadMore = ({ readMoreData }) => {
                         })
                     }
                 </div>
-                <img className="card-img" style={{ height: "300px" }} src={img} alt="img" />
-                <div className="card-content" style={{textAlign:"center"}}>
-                    <h5>{name}</h5>
-                    <p>{title}</p>
-                    <p className="card-desc">{description}</p>
+                <img className="card-img" style={{ height: "300px" }} src={gif ?? img} alt="img" />
+                <div className="card-content" style={{ textAlign: "center" }}>
                     <div className="card-bottom">
                         <p className="card-ld" onClick={() => {
                             if (liveDemo.length > 0) {
@@ -53,6 +50,9 @@ const ProjectReadMore = ({ readMoreData }) => {
                             LIVE DEMO
                         </p>
                     </div>
+                    <h5>{name}</h5>
+                    <p>{title}</p>
+                    <p className="card-desc">{description}</p>
                 </div>
             </div>
         </div>

@@ -97,7 +97,6 @@ header ul li a {
     letter-spacing: 2px;
     font-weight: bold;
     color: var(--color);
-    transition: all 0.3s ease-in-out;
 }
 
 header ul .resume a {

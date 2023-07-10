@@ -19,6 +19,10 @@
     height: var(--card-height);
     object-fit: contain;
     text-align: center;
+    border-radius: 10px;
+    user-select: none;
+    width: 100%;
+    height: fit-content;
 }
 
 .card-content {
@@ -35,9 +39,10 @@
 }
 
 .card-content .card-desc {
-    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .card-content .card-bottom .card-ld {
@@ -105,6 +110,10 @@
     overflow: auto;
 }
 
+.project-read-more::-webkit-scrollbar {
+    display: none;
+}
+
 .project-read-more .close {
     position: absolute;
     right: 20px;
@@ -112,6 +121,25 @@
     cursor: pointer;
     color: white;
 }
+
+.project-read-more .card-content .card-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-read-more .card-content .card-bottom .card-ld {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+    letter-spacing: 1px;
+    color: #FF0060;
+    text-underline-offset: 7px;
+    font-weight: bold;
+}
+
 
 @media only screen and (max-width: 1050px) {
 
