@@ -9,6 +9,7 @@
     grid-template-columns: 20% 80%;
     border-radius: 10px;
     height: var(--card-height);
+    overflow: hidden;
     width: 100%;
     align-items: center;
     box-shadow: none !important;
@@ -16,7 +17,16 @@
 }
 
 .card-img {
-    height: var(--card-height);
+    height: var(--card-height) !important;
+    object-fit: contain;
+    text-align: center;
+    border-radius: 10px;
+    user-select: none;
+    width: 100%;
+    height: fit-content;
+}
+
+.card-img-readMore {
     object-fit: contain;
     text-align: center;
     border-radius: 10px;

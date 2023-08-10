@@ -36,7 +36,7 @@ console.log(gif)
                         })
                     }
                 </div>
-                <img className="card-img" style={{ height: "300px" }} src={gif ?? img} alt="img" />
+                <img className="card-img-readMore" style={{ height: "300px" }} src={gif ?? img} alt="img" />
                 <div className="card-content" style={{ textAlign: "center" }}>
                     <div className="card-bottom">
                         <p className="card-ld" onClick={() => {
