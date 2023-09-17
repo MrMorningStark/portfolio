@@ -39,10 +39,10 @@ const SkillsScreen = () => {
                     <h5>LANGUAGE</h5>
                     <p>Dart</p>
                     <p>Javascript</p>
-                    <p>Typescript</p>
+                    <p>C++</p>
+                    <p>C</p>
                     <p>Python</p>
                     <p>Html</p>
-                    <p>Css</p>
                 </div>
                 <div className="skills-content">
                     <h5>FRAMEWORK</h5>
@@ -59,12 +59,14 @@ const SkillsScreen = () => {
                     <p>Redis</p>
                     <p>Mongodb</p>
                     <p>MySql</p>
+                    <p>Kafka</p>
                 </div>
                 <div className="skills-content">
                     <h5>TOOL</h5>
                     <p>Docker</p>
                     <p>Git & Github</p>
                     <p>Kubernetes</p>
+                    <p>AWS</p>
                     <p>Digital Ocean</p>
                     <p>Heroku</p>
                     <p>Render</p>
