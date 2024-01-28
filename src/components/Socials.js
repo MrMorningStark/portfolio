@@ -9,7 +9,7 @@ const Socials = () => {
             socialsEle.style.cursor = 'default';
         }}>
             <RoundButton title={"github"} url={"https://github.com/MrMorningStark"} icon="fab fa-github fa-lg" />
-            <RoundButton title={"twitter"} url={"https://twitter.com/MrMorningStark"} icon="fab fa-twitter fa-lg" iconColor="#1DA1F2" />
+            <RoundButton title={"twitter"} url={"https://twitter.com/MrMorningStark"} icon="fab fa-x-twitter fa-lg"  />
             <RoundButton title={"linkedin"} url={"https://www.linkedin.com/in/rajat-khatri-7872ba206/"} icon="fab fa-linkedin fa-lg" iconColor="#0072b1" />
             {/* <RoundButton title={"email"} url={"https://mail.google.com/mail/?view=cm&fs=1&to=khatrirajat888@gmail.com"} icon="fab fa-envelope fa-lg" /> */}
             {/* <RoundButton title={"instagram"} icon="fab fa-instagram fa-lg" /> */}
