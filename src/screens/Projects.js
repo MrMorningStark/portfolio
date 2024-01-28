@@ -75,7 +75,7 @@ const Projects = () => {
                         return (
                             <Card
                                 key={index}
-                                index={index + 1}
+                                index={index + 5}
                                 img={project.img}
                                 gif={project.gif}
                                 name={project.name}
