@@ -38,7 +38,7 @@ const AboutScreen = () => {
                     <h4>ME, MYSELF AND I</h4>
                 </div>
                 <div className="about-content">
-                    <p>Hi, I’m a full stack web developer with over {experience} years of experience. I have a knack for solving problems and making things work.
+                    <p>Hi, I’m a full stack web developer with over <strong>{experience} years</strong> of experience. I have a knack for solving problems and making things work.
                     </p>
                     <p>
                         I have experience in using a bunch of technologies and frameworks 🛠️. You name it, I’ve probably used it. Or at least googled it. I enjoy learning new skills 📚 and taking on new challenges.
