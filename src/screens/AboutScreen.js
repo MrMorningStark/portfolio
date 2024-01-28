@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
 const AboutScreen = () => {
-    const experienceYears = new Date().getFullYear() - 2022;
+    const experienceDuration = new Date().getTime() - new Date('2021-05-01').getTime();
+    const experience = (experienceDuration / (1000 * 60 * 60 * 24 * 365)).toFixed(1);
 
     const [isVisible, setVisible] = useState(false);
     const domRef = useRef();
@@ -37,7 +38,7 @@ const AboutScreen = () => {
                     <h4>ME, MYSELF AND I</h4>
                 </div>
                 <div className="about-content">
-                    <p>Hi, I’m a full stack web developer with over {experienceYears} year of experience. I have a knack for solving problems and making things work.
+                    <p>Hi, I’m a full stack web developer with over {experience} years of experience. I have a knack for solving problems and making things work.
                     </p>
                     <p>
                         I have experience in using a bunch of technologies and frameworks 🛠️. You name it, I’ve probably used it. Or at least googled it. I enjoy learning new skills 📚 and taking on new challenges.
