@@ -18,12 +18,13 @@
 
 .card-img {
     height: var(--card-height) !important;
-    object-fit: contain;
+    object-fit: cover;
     text-align: center;
     border-radius: 10px;
     user-select: none;
     width: 100%;
     height: fit-content;
+    border: 1px solid black;
 }
 
 .card-img-readMore {
@@ -164,6 +165,10 @@
     .project-read-more {
         height: 80%;
         width: 100%;
+    }
+
+    .card-img {
+        object-fit: fill;
     }
 }
 

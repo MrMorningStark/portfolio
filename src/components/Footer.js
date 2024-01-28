@@ -6,7 +6,7 @@ const Footer = () => {
             <footer>
                 <div className="footer-top">
                     <h3>CONTACT ME</h3>
-                    <p>Leave a message on my any of my social media, i'll reach out to you soon.</p>
+                    <p>Feel free to contact me anytime and I will get back to you as soon as possible.</p>
                     <Socials />
                 </div>
                 <div className="footer-bottom">
